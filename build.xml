@@ -1,0 +1,49 @@
+<project default="create_htmlparser_jar" name="Create Runnable Jar for Project SeleniumAutomation-3.1 with Jar-in-Jar Loader">  
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->  
+    <!--ANT 1.7 is required                                        -->  
+    <target name="create_htmlparser_jar">  
+        <jar destfile="htmlParser.jar">  
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>  
+                <attribute name="Rsrc-Main-Class" value="com.thend.home.HtmlParser"/>  
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ commons-io-2.4.jar nekohtml.jar nekohtmlSamples.jar xercesImpl.jar xmlParserAPIs.jar 
+                	cpdetector_1.0.10.jar antlr-2.7.4.jar chardet-1.0.jar jargs-1.0.jar"/>  
+            </manifest>  
+            <zipfileset src="jar-in-jar-loader.zip"/>  
+            <fileset dir="build/classes"/>  
+            <zipfileset dir="libs" includes="commons-io-2.4.jar"/>  
+            <zipfileset dir="libs" includes="nekohtml.jar"/>  
+            <zipfileset dir="libs" includes="nekohtmlSamples.jar"/>  
+            <zipfileset dir="libs" includes="xercesImpl.jar"/>  
+            <zipfileset dir="libs" includes="xmlParserAPIs.jar"/>  
+        	<zipfileset dir="libs" includes="cpdetector_1.0.10.jar"/>  
+            <zipfileset dir="libs" includes="antlr-2.7.4.jar"/>  
+            <zipfileset dir="libs" includes="chardet-1.0.jar"/>  
+            <zipfileset dir="libs" includes="jargs-1.0.jar"/>  
+        </jar>  
+    </target>  
+	<target name="create_wordseg_jar">  
+        <jar destfile="wordseg.jar">  
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>  
+                <attribute name="Rsrc-Main-Class" value="com.thend.home.WordSeg"/>  
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ commons-io-2.4.jar nekohtml.jar nekohtmlSamples.jar xercesImpl.jar xmlParserAPIs.jar 
+                	cpdetector_1.0.10.jar antlr-2.7.4.jar chardet-1.0.jar jargs-1.0.jar ansj_seg-20130808.jar"/>  
+            </manifest>  
+            <zipfileset src="jar-in-jar-loader.zip"/>  
+            <fileset dir="build/classes"/>  
+            <zipfileset dir="libs" includes="commons-io-2.4.jar"/>  
+            <zipfileset dir="libs" includes="nekohtml.jar"/>  
+            <zipfileset dir="libs" includes="nekohtmlSamples.jar"/>  
+            <zipfileset dir="libs" includes="xercesImpl.jar"/>  
+            <zipfileset dir="libs" includes="xmlParserAPIs.jar"/>  
+        	<zipfileset dir="libs" includes="cpdetector_1.0.10.jar"/>  
+            <zipfileset dir="libs" includes="antlr-2.7.4.jar"/>  
+            <zipfileset dir="libs" includes="chardet-1.0.jar"/>  
+            <zipfileset dir="libs" includes="jargs-1.0.jar"/>  
+        	<zipfileset dir="libs" includes="ansj_seg-20130808.jar"/>  
+        </jar>  
+    </target>  
+</project>

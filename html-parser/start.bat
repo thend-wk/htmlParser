@@ -1,0 +1,1 @@
+java -jar htmlParser.jar %1
